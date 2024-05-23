@@ -9,6 +9,24 @@ body {
   align-items: center;
 }
 
+/* BUTTONS */
+a {
+  margin: 4px auto;
+  padding: 4px;
+}
+a:hover {
+  box-shadow: 2px 2px 4px gray;
+}
+a > button {
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  border: none;
+  font-weight: 800;
+}
+a:hover > button {
+  color: rgb(0, 0, 153);
+}
+
 .drpdwn {
   display: flex;
 }
@@ -30,8 +48,12 @@ header {
 }
 header > h1 {
   flex: 2;
+  color: yellow;
   margin: 4px;
   padding: 4px;
+  font-size: 60px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgb(59, 59, 59);
 }
 header > div {
   margin: 0;
@@ -50,13 +72,17 @@ header > div {
   align-items: center;
 }
 .homepage > .infoList {
-  background-color: rgb(152, 152, 231);
   width: 1200px;
   height: 160px;
   display: block;
 }
 .homepage > .infoList > ul {
-  margin: 0 auto;
+  color: rgb(68, 68, 68);
+  margin: 45px auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-weight: 900;
 }
 .homepage > .allFeatures {
   width: inherit;
@@ -74,7 +100,7 @@ header > div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .homepage > .allFeatures > .feature > .featureImg {
   width: 350px;
@@ -86,32 +112,69 @@ header > div {
   margin: 0 15px;
   display: flex;
   flex-direction: column;
-
   align-items: center;
 }
-.homepage > .allFeatures > .feature > .featureInfo > p {
-  height: 90%;
+.homepage > .allFeatures > .feature > .featureInfo > ul {
+  padding: 0;
+  text-align: start;
+  font-weight: 500;
 }
 .homepage > .info {
-  background-color: rgb(152, 152, 231);
   width: inherit;
   height: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
+.homepage > .info > p {
+  color: red;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
 .homepage > .contactUs {
-  background-color: rgb(152, 231, 220);
   width: inherit;
   height: 150px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homepage > .contactUs > a {
+  background-color: rgb(255, 255, 255);
+  width: 40%;
+  height: 50px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 2px solid blue;
+}
+.homepage > .contactUs > a:hover {
+  background-color: rgb(78, 78, 255);
+  box-shadow: 2px 2px 4px gray;
+}
+.homepage > .contactUs > a > button {
+  color: blue;
+  background-color: transparent;
+  border: none;
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.homepage > .contactUs > a:hover > button {
+  color: rgb(255, 255, 255);
 }
 
 footer {
-  background-color: rgb(220, 220, 255);
+  background-color: rgb(197, 197, 188);
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  font-weight: 900;
 }
 
 @media (min-width: 1500px) {
@@ -137,6 +200,7 @@ footer {
   }
   header > h1 {
     flex: 1;
+    font-size: 42px;
   }
   header > div {
     flex: 1;
@@ -163,6 +227,10 @@ footer {
 @media (max-width: 800px) {
   header {
     width: 100%;
+  }
+  header > h1 {
+    flex: 1;
+    font-size: 30px;
   }
   .homepage > .infoList {
     width: inherit;
@@ -194,10 +262,19 @@ footer {
     margin: 0 auto;
     width: inherit;
     /* height: 230px; */
-    align-items: start;
+    align-items: center;
+  }
+  .homepage > .allFeatures > .feature > .featureInfo > ul {
+    padding: 10px;
+    text-align: center;
+    list-style: none;
   }
 }
 @media (max-width: 400px) {
+  header > h1 {
+    flex: 1;
+    font-size: 20px;
+  }
   .homepage > .allFeatures > .feature {
     flex-direction: column;
   }

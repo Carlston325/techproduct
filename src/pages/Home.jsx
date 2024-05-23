@@ -1,11 +1,13 @@
+import Button from "../components/Button";
+
 function Home() {
   return (
     <main className="homepage">
       <div className="infoList">
         <ul>
-          <li>list item 1</li>
-          <li>list item 2</li>
-          <li>list item 3</li>
+          <li>Our drones are beginner friendly and easy to fly</li>
+          <li>Images from the drone can be transmitted upto 7km</li>
+          <li>You can fly our drone upto 500m</li>
         </ul>
       </div>
       <div className="allFeatures">
@@ -17,9 +19,12 @@ function Home() {
           />
           <div className="featureInfo">
             <ul>
-              <li>A built in 3-axis camera in 4k.</li>
-              <li>A GPS tracker.</li>
+              <li>
+                Can be controlled by your phone (devices) through our App.
+              </li>
+              <li>Has a built in 3-axis camera in 4k.</li>
               <li>Ultra HD video quality.</li>
+              <li>A GPS tracker.</li>
             </ul>
           </div>
         </div>
@@ -31,8 +36,10 @@ function Home() {
           />
           <div className="featureInfo">
             <ul>
+              <li>Remote controlled.</li>
               <li>Slick foldable design.</li>
               <li>Manufactured with high quality plastic.</li>
+              <li>Flight lenght of 30 - 40 minutes.</li>
             </ul>
           </div>
         </div>
@@ -44,13 +51,20 @@ function Home() {
           />
           <div className="featureInfo">
             <ul>
-              <li>30 minutes of camera life.</li>
+              <li>Has an Altitude Hold Mode.</li>
+              <li>Comes with a recording capability of 30 minutes.</li>
+              <li>Takeoff & Landings with only a single key.</li>
+              <li>2 hours charging time.</li>
             </ul>
           </div>
         </div>
       </div>
-      <div className="info">small info</div>
-      <div className="contactUs">contact us</div>
+      <div className="info">
+        <p>small info</p>
+      </div>
+      <div className="contactUs">
+        <Button btnPath="/contact" btnName="Contact" />
+      </div>
     </main>
   );
 }
